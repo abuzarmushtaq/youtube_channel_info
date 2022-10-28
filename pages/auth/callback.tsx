@@ -32,7 +32,7 @@ const AuthCallback: NextPage = () => {
       return fetch(verifyUrl).then((res: any) => {
         return res.json().then((value: any) => {
           const email = value.email
-          if (value.audience !== process.env.CLIENT_ID) {
+          if (value.audience !== '239014614732-mksfhf7iluq8162v6k9squdg2l0jt55v.apps.googleusercontent.com') {
             throw new Error('invalid audience')
           }
           setIsVerify(true)

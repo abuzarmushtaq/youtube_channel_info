@@ -19,8 +19,8 @@ const SelectPage: NextPage = () => {
 
   return (
     <div className={styles.container}>
+      <button onClick={() => router.reload(window.location.pathname)}>Log Out</button>
       <main className={styles.main}>
-        <h3>Please select the information you wish to register</h3>
         {youtubeInfos.map((y: YouTube, index: number) => {
           return <RegisterInfoCard index={index} email={auth.email} youtubeInfo={y} key={index} />
         })}
