@@ -18,6 +18,8 @@ const Home: NextPage = () => {
     return registerIndex === undefined ? undefined : youtubeInfo.at(registerIndex)
   }, [registerIndex, youtubeInfo])
 
+  console.log(registerYouTubeInfo)
+
   const onClose = () => {
     setOpenModal(false)
   }
