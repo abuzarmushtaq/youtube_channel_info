@@ -46,6 +46,23 @@ const AuthCallback: NextPage = () => {
     accessToken ? 'youtube/dataapi' : null,
     () => {
       const youtubeDataApiUrl = `https://www.googleapis.com/youtube/v3/channels?part=id,snippet,brandingSettings,statistics&mine=true&access_token=${accessToken}`
+      fetch(youtubeDataApiUrl)
+        .then(async (response) => {
+          let clone = response.clone();
+          let res = await clone.json();
+          // console.log(res);
+          return response.blob()
+        })
+        .then(blob => {
+          var url = window.URL.createObjectURL(blob);
+          var a = document.createElement('a');
+          a.href = url;
+          a.download = "raw_data.json";
+          a.click();
+        })
+        .catch(function (err) {
+          console.error(err)
+        })
       return fetch(youtubeDataApiUrl).then((res: any) => {
         const data = res.json()
         return data.then((value: any) => {
