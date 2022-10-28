@@ -45,7 +45,7 @@ const Home: NextPage = () => {
             <p>YouTube View Count: {registerYouTubeInfo.viewCount}</p>
             <p>YouTube Video Count: {registerYouTubeInfo.videoCount}</p>
             <p>YouTube Keywords: {registerYouTubeInfo.keywords}</p>
-            <button onClick={() => router.reload(window.location.pathname)}>Log Out</button>
+            <button onClick={() => router.push('/')}>Log Out</button>
           </div>
         ) : (
           <div>
