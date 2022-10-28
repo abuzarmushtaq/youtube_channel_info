@@ -1,12 +1,14 @@
 import { useMemo, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import { useRecoilState } from 'recoil'
 import { authState, registerIndexState, youtubeState } from '../state/auth'
 import styles from '../styles/Home.module.css'
 import { Modal } from '../components/Modal'
 
 const Home: NextPage = () => {
+  const router = useRouter()
   const [openModal, setOpenModal] = useState(false)
   const [auth] = useRecoilState(authState)
   const [youtubeInfo] = useRecoilState(youtubeState)
@@ -43,6 +45,7 @@ const Home: NextPage = () => {
             <p>YouTube View Count: {registerYouTubeInfo.viewCount}</p>
             <p>YouTube Video Count: {registerYouTubeInfo.videoCount}</p>
             <p>YouTube Keywords: {registerYouTubeInfo.keywords}</p>
+            <button onClick={() => router.reload(window.location.pathname)}>Log Out</button>
           </div>
         ) : (
           <div>
