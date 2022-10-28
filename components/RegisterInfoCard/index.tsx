@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { YouTube } from 'state/auth'
+import { YouTube } from '../../state/auth'
 import styles from './styles.module.css'
 import { Modal } from './Modal'
 

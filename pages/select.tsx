@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import { useRecoilState } from 'recoil'
-import { authState, youtubeState, YouTube } from 'state/auth'
+import { authState, youtubeState, YouTube } from '../state/auth'
 import styles from '../styles/Home.module.css'
-import { RegisterInfoCard } from 'components/RegisterInfoCard'
+import { RegisterInfoCard } from '../components/RegisterInfoCard'
 
 const SelectPage: NextPage = () => {
   const router = useRouter()

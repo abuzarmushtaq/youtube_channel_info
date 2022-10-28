@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useRecoilState } from 'recoil'
-import { registerIndexState } from 'state/auth'
-import { YouTube } from 'state/auth'
+import { registerIndexState, YouTube } from '../../state/auth'
+// import { YouTube } from '../../state/auth'
 import styles from './styles.module.css'
 
 interface Props {

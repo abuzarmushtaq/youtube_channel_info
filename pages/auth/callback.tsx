@@ -4,7 +4,7 @@ import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 import DefaultErrorPage from 'next/error'
 import { useRecoilState } from 'recoil'
-import { authState, youtubeState } from 'state/auth'
+import { authState, youtubeState } from '../../state/auth'
 
 const SCOPE_YOUTUBE = 'https://www.googleapis.com/auth/youtube.readonly'
 const SCOPE_EMAIL = 'https://www.googleapis.com/auth/userinfo.email'

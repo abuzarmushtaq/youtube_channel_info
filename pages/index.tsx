@@ -2,9 +2,9 @@ import { useMemo, useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { useRecoilState } from 'recoil'
-import { authState, registerIndexState, youtubeState } from 'state/auth'
+import { authState, registerIndexState, youtubeState } from '../state/auth'
 import styles from '../styles/Home.module.css'
-import { Modal } from 'components/Modal'
+import { Modal } from '../components/Modal'
 
 const Home: NextPage = () => {
   const [openModal, setOpenModal] = useState(false)
